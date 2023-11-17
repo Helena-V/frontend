@@ -29,7 +29,7 @@ const StickyBarLeft2 = ({ language }) => {
 
     return (
         <Wrapper>
-            <Link href="https://github.com/Helena-V" target="_blank" rel="noopener noreferrer">{ language === 'EN' ? 'View the FRONTEND of this project.' : 'Tämän projektin FRONTEND.' }</Link>
+            <Link href="https://github.com/Helena-V/frontend" target="_blank" rel="noopener noreferrer">{ language === 'EN' ? 'View the FRONTEND of this project.' : 'Tämän projektin FRONTEND.' }</Link>
         </Wrapper>
     )
 }
