@@ -30,7 +30,6 @@ const StickyBar2 = ({ language }) => {
 
       return (
           <Div>
-            <Link href={ language === 'EN' ? './src/resources/CV-EN-public.pdf' : './src/resources/CV-FI-public.pdf' } target="_blank" rel="noopener noreferrer">CV</Link>
             <Link href="https://github.com/Helena-V" target="_blank" rel="noopener noreferrer"><img className="objects" style={{ margin: '0', padding: '0' }} src="./src/resources/github-mark.svg"/></Link>
           </Div>
     )

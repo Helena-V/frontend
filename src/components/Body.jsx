@@ -257,7 +257,6 @@ const Body = ({ language, content }) => {
                      } >                      
                  </Display>
                  <P>{ language === 'EN' ? content.EnglishQuiz[4].text : content.FinnishQuiz[4].text }</P>
-                 <P><Link href={ language === 'EN' ? './src/resources/CV-EN-public.pdf' : './src/resources/CV-FI-public.pdf' } target="_blank" rel="noopener noreferrer">CV</Link></P>
                  <P>{ language === 'EN' ? content.EnglishQuiz[4].again : content.FinnishQuiz[4].again }</P>  
                  <Button onClick={reset}>{ language === 'EN' ? content.EnglishQuiz[4].button : content.FinnishQuiz[4].button}</Button>
             </Wrapper>         
