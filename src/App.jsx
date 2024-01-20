@@ -107,32 +107,32 @@ const App = () => {
     <Parallax pages={15} id="parallax-wrapper" style={{ height: '100vh', margin: '0%', padding: '0', position: 'relative' }}>
 
       <ParallaxLayer speed={0.4} sticky={{ start: 0, end: 0.5 }} style={{ zIndex: '0' }}>
-        <img className="background" src="./src/resources/background1.3.png" />
+        <img className="background" src="./resources/background1.3.png" />
       </ParallaxLayer>
 
       <ParallaxLayer offset={0.0} sticky={{ start: 0, end: 3 }} style={{ zIndex: '10' }}>
-        <animated.img className="background-left" src="./src/resources/background3-left.png" style={springPropsLeftSide} />
-        <animated.img className="background-right" src="./src/resources/background2-right.png" style={springPropsRightSide} />
+        <animated.img className="background-left" src="./resources/background3-left.png" style={springPropsLeftSide} />
+        <animated.img className="background-right" src="./resources/background2-right.png" style={springPropsRightSide} />
       </ParallaxLayer>
 
       <ParallaxLayer offset={0.0} speed={0.5} style={{ display: 'inline-block', position: 'absolute', left: '70%', width: '30%', zIndex: '5' }} >
-        <img className="objects" src="./src/resources/lightbluecloud.png" />
+        <img className="objects" src="./resources/lightbluecloud.png" />
       </ParallaxLayer>
 
       <ParallaxLayer offset={0.0} speed={0.3} style={{ display: 'inline-block', position: 'absolute', top: '-2.25%', left: '65%', width: '25%', zIndex: '-10' }} >
-        <img className="objects" src="./src/resources/darkbluecloud.png" />
+        <img className="objects" src="./resources/darkbluecloud.png" />
       </ParallaxLayer>
 
       <ParallaxLayer offset={0.0} speed={2.0} style={{ display: 'inline-block', position: 'absolute', left: '40%', top: '-2.75%', width: '30%', zIndex: '15' }} >
-        <img className="objects" src="./src/resources/lightbluecloud.png" />
+        <img className="objects" src="./resources/lightbluecloud.png" />
       </ParallaxLayer>
 
       <ParallaxLayer offset={0.0} speed={0.0} style={{ display: 'block', position: 'absolute', left: '60%', top: '-1.75%', width: '25%', zIndex: '-10' }}>
-        <img className="objects" src="./src/resources/lightbluecloud.png" />
+        <img className="objects" src="./resources/lightbluecloud.png" />
       </ParallaxLayer>
 
       <ParallaxLayer offset={0.0} speed={0.0} style={{ display: 'block', position: 'absolute', left: '40%', top: '-0.5%', width: '25%', zIndex: '0' }}>
-        <img className="objects" src="./src/resources/darkbluecloud.png" />
+        <img className="objects" src="./resources/darkbluecloud.png" />
       </ParallaxLayer>
 
       <ParallaxLayer offset={1.5} speed={0.4} sticky={{ start: 1.8, end: 2.6 }} style={{ display: 'block', position: 'absolute', margin: 'auto', width: '50%' }}>

@@ -10,7 +10,7 @@ const Links = styled.div`
     right: 0;
 `
 
-const Footer = ({ language, setContactInformationVisible, setStudiesVisible }) => {
+const Footer = ({ language }) => {
 
 
     return (
