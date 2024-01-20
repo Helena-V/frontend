@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
     margin: auto;
+    margin-top: 2em;
     padding: 3em;
     width: 50%;
     background-color: #91de72;

@@ -8,14 +8,13 @@ import StickyBar2 from './components/StickyBar2.jsx'
 import StickyBarLeft from './components/StickyBarLeft.jsx'
 import StickyBarLeft2 from './components/StickyBarLeft2.jsx'
 import Footer from './components/Footer.jsx'
-import Popup from './components/Popup.jsx'
-import ListOfStudies from './components/ListOfStudies.jsx'
 import Box1 from './components/Box1.jsx'
 import Box2 from './components/Box2.jsx'
 import Box3 from './components/Box3.jsx'
 import Box4 from './components/Box4.jsx'
 import Box5 from './components/Box5.jsx'
 import Box6 from './components/Box6.jsx'
+import Box7 from './components/Box7.jsx'
 import textService from './services/texts.js'
 import contactService from './services/contact.js'
 
@@ -29,26 +28,17 @@ const App = () => {
   const [ windowHeight, setWindowHeight ] = useState(0)
   const [ scrollPosition, setScrollPosition ] = useState(0)
   const [ isReady150, setIsReady150 ] = useState(false)
-  const [ contactInformationVisible, setContactInformationVisible ] = useState(false)
-  const [ studiesVisible, setStudiesVisible ] = useState(false)
-  const [ bodyVisible, setBodyVisible ] = useState(true)
 
   useEffect(() => {
-    console.log('effect')
     textService.getAll()
       .then(response => {
-          console.log('promise fulfilled')
-          console.log(response.data)
           setData(response.data)
       })
   }, [])
 
   useEffect(() => {
-    console.log('effect2')
     contactService.getAll()
       .then(response => {
-        console.log('promise2 fulfilled')
-        console.log(response.data)
         setData2(response.data)
       })
   }, [])
@@ -162,7 +152,7 @@ const App = () => {
       </ParallaxLayer>
 
       <ParallaxLayer offset={6.0} sticky={{ start: 6.0, end: 14 }} style={{ display: 'inline-block', position: 'absolute', top: '35%', left: '90%', width: '8%', margin: '0', padding: '0', maxHeight: '30%' }}>
-        <StickyBar2 language={language} setStudiesVisible={setStudiesVisible}></StickyBar2>
+        <StickyBar2 language={language}></StickyBar2>
       </ParallaxLayer>
 
       <ParallaxLayer offset={6.6} sticky={{ start: 6.6, end: 7.6 }} style={{ display: 'inline-block', position: 'absolute', top: '20%', left: '35%', width: '15em' }}>
@@ -189,11 +179,13 @@ const App = () => {
         <Box6 language={language} content={data[0]}></Box6>
       </ParallaxLayer>
 
+      <ParallaxLayer offset={12.2} sticky={{ start: 12.2, end: 13.2 }} style={{ display: 'inline-block', position: 'absolute', top: '20%', left: '35%', width: '15em' }}>
+        <Box7 language={language}></Box7>
+      </ParallaxLayer>
+
       <ParallaxLayer offset={14.0} style={{ position: 'absolute', zIndex: '100'}}>
-        { contactInformationVisible ? <Popup language={language} setContactInformationVisible={setContactInformationVisible} data2={data2}></Popup> : '' }
-        { studiesVisible ? <ListOfStudies language={language} setStudiesVisible={setStudiesVisible}></ListOfStudies> : '' }
-        { bodyVisible ? <Body language={language} content={data[1]}></Body> : '' }
-        <Footer language={language} setContactInformationVisible={setContactInformationVisible} setStudiesVisible={setStudiesVisible}></Footer>
+        <Body language={language} content={data[1]}></Body>
+        <Footer language={language}></Footer>
       </ParallaxLayer>
 
     </Parallax>

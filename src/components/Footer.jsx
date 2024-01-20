@@ -1,65 +1,24 @@
 import styled from 'styled-components'
 
 const Links = styled.div`
-    text-align: center;
-    background-color: #BABEC0;
-    padding: 0em;
-    display: flex;
-    list-style-type: none;
+    text-align: right;
+    background-color: #ffffff;
+    padding: 2em;
+    float: right;
     position: absolute;
-    bottom: 0%;
-    width: 100%;
-`
-const Li = styled.li`
-    margin: auto;
-    padding: 0.5em;
-`
-const A = styled.a`
-    margin: 0;
-    padding: 0.5em;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
+    bottom: 0;
+    right: 0;
 `
 
 const Footer = ({ language, setContactInformationVisible, setStudiesVisible }) => {
 
-    const handleClick = () => {
-        setContactInformationVisible(true)
-        setStudiesVisible(false)
-    }
 
-    const handleClick2 = () => {
-        setStudiesVisible(true)
-        setContactInformationVisible(false)
-    }
+    return (
+        <Links>
+            Imagery produced by Stable Diffusion AI.
+        </Links>
+    )
 
-    if (language === 'EN') {
-        return (
-            <Links>
-                <Li>
-                    <A onClick={handleClick}>CONTACT</A>
-                </Li>
-                <Li>
-                    <A onClick={handleClick2}>My Studies in Computer Science</A>
-                </Li>
-                <Li>Imagery produced by Stable Diffusion AI</Li>
-            </Links>
-        )
-    } else {
-        return (
-            <Links>
-                <Li>
-                    <A onClick={handleClick}>OTA YHTEYTTÄ</A>
-                </Li>
-                <Li>
-                    <A onClick={handleClick2}>Tietojenkäsittelytieteen opintoni</A>
-                </Li>
-                <Li>Imagery produced by Stable Diffusion AI</Li>
-            </Links>
-        )
-    }
 
 }
 

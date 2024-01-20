@@ -25,12 +25,17 @@ const Link = styled.a`
     color: #000000;
     cursor: pointer;
 `
+const Img = styled.img`
+    height: 3em;
+    cursor: pointer;
+`
 
 const StickyBar2 = ({ language }) => {
 
       return (
           <Div>
             <Link href="https://github.com/Helena-V" target="_blank" rel="noopener noreferrer"><img className="objects" style={{ margin: '0', padding: '0' }} src="./src/resources/github-mark.svg"/></Link>
+            <Link href="mailto:hanna.r.vesa@gmail.com"><Img src="./src/resources/mail.svg"></Img></Link>
           </Div>
     )
 } 
